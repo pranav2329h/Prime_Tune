@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani&family=Poppins:wght@300;400;500;600&family=Raleway:wght@100&display=swap');
+
+body {
+  background-color: #010a14;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.sidebar {
+  width: 15%;
+  background-color: #191e25;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.sidebar li {
+  list-style: none;
+  padding: 10px;
+  margin-right: 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-vertical {
+  width: 250px;
+  padding: 4px;
+  margin: 1em auto;
+  list-style: none;
+  border-radius: 20px;
+}
+
+.item,
+.item a {
+  display: block;
+}
+
+.item a {
+  margin: 1px 0;
+  padding: 8px 20px;
+  color: #d8d7d7;
+  background: #191e25;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  border-radius: 20px;
+}
+
+.item a i {
+  margin: 1px 0;
+  padding: 8px 20px;
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  border-radius: 20px;
+}
+
+.item a:hover,
+.item a:focus {
+  background: #c8c8c8;
+  color: #191e25;
+  padding-left: 30px;
+  border-radius: 20px;
+}
+
+.home {
+  background-color: #191e25;
+  width: 85%;
+  border-radius: 20px;
+  font-family: 'poppins', sans-serif;
+  color: white;
+}
+
+[type=radio] {
+  display: none;
+}
+
+#slider {
+  height: 35vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slider label {
+  margin: auto;
+  width: 900px;
+  height: 500px;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+  transform: translate3d(-30%, 0, -200px);
+}
+
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+  transform: translate3d(-15%, 0, -100px);
+}
+
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0, 0, 0, .3), 0 11px 7px 0 rgba(0, 0, 0, .19);
+  transform: translate3d(0, 0, 0);
+}
+
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+  transform: translate3d(15%, 0, -100px);
+}
+
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+  transform: translate3d(30%, 0, -200px);
+}
+
+#slide1 {
+  background: url(images/ANposter.jpg);
+}
+
+#slide2 {
+  background: url(images/kkposter.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#slide3 {
+  background: url(images/ARposter.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#slide4 {
+  background: url(images/DDposter.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#slide5 {
+  background: url(images/SNposter.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.home h2 {
+  padding-left: 20px;
+}
+
+.album {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #202832;
+  width: 20%;
+  border-radius: 20px;
+  padding: 20px;
+  display: grid;
+  cursor: pointer;
+  border: 2px solid rgba(56, 56, 56, 0.76);
+  transition: 0.2s ease-in;
+}
+
+.card:hover {
+  border: 2px solid rgba(238, 235, 235, 0.54);
+}
+
+.card span {
+  color: rgba(209, 179, 179, 0.54);
+  font-family: 'Poppins', sans-serif;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.artist {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card-artist {
+  width: 20%;
+  border-radius: 20px;
+  display: grid;
+  align-items: center;
+}
+
+.card-artist img {
+  width: 150px;
+  height: 150px;
+  border-radius: 80%;
+  padding: 10px;
+  display: grid;
+  cursor: pointer;
+}
+
+.card-artist h3 {
+  padding-left: 20px;
+}
+
+.card-artist span {
+  color: rgba(209, 179, 179, 0.54);
+  font-family: 'Poppins', sans-serif;
+  padding-left: 20px;
+}
+
+.bottom {
+  overflow: hidden;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icons {
+  margin: auto;
+  margin-top: 20px;
+}
+
+.icons i {
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+#masterSongCover {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  height: 50px;
+}
+
+#masterSongName {
+  position: fixed;
+  left: 75px;
+  bottom: 15px;
+  height: 50px;
+  max-width: 275px;
+  display: flex;
+  align-items: center;
+  white-space: pre-line;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+
+.progressBarContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#masterSongProgressDuration {
+  padding: 0 5px;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+#myProgressBar {
+  margin: auto;
+  width: 40vw;
+  height: 0.7vh;
+  cursor: pointer;
+}
+
+#masterSongDuration {
+  padding: 0 5px;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+#gif {
+  position: absolute;
+  right: 60px;
+  bottom: 0px;
+  width: 250px;
+  height: 80px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
